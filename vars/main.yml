@@ -1,2 +1,7 @@
 ---
 # vars file for systemd
+_systemd_path:
+  default: /usr/lib/systemd/system
+  Debian: /lib/systemd/system
+
+system_path: "{{ _systemd_path[ansible_os_family] | default(_systemd_path['default']) }}"
