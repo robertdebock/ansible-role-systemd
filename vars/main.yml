@@ -1,5 +1,8 @@
 ---
 # vars file for systemd
+systemd_requirements:
+  - dbus
+
 _systemd_path:
   default: /usr/lib/systemd/system
   Debian: /lib/systemd/system

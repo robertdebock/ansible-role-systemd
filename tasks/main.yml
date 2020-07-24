@@ -3,6 +3,11 @@
 - name: include assert.yml
   include_tasks: assert.yml
 
+- name: install requirements
+  package:
+    name: "{{ systemd_requirements }}"
+    state: present
+
 - name: set default target
   file:
     src: "{{ system_path }}/{{ systemd_default_target }}"
