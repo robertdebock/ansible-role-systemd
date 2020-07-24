@@ -1,7 +1,12 @@
 ---
 # vars file for systemd
-systemd_requirements:
-  - dbus
+_systemd_requirements:
+  default:
+    - dbus
+  Suse:
+    - dbus-1
+
+systemd_requirements: "{{ _systemd_requirements[ansible_os_family] | default(_systemd_requirements['default']) }}"
 
 _systemd_path:
   default: /usr/lib/systemd/system
