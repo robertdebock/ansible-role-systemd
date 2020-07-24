@@ -1,0 +1,11 @@
+---
+# handlers file for systemd
+- name: restart systemd-journald
+  service:
+    name: systemd-journald
+    state: restarted
+
+- name: restart systemd-logind
+  service:
+    name: systemd-logind
+    state: restarted

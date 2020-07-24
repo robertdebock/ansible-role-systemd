@@ -1,0 +1,86 @@
+---
+# tasks file for systemd
+- name: include assert.yml
+  include_tasks: assert.yml
+
+- name: set default target
+  file:
+    src: /usr/lib/systemd/system/{{ systemd_default_target }}
+    dest: /etc/systemd/system/default.target
+    state: link
+
+- name: configure coredump.conf
+  ini_file:
+    path: /etc/systemd/coredump.conf
+    section: Login
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+  loop: "{{ systemd_coredump }}"
+  loop_control:
+    label: "{{ item.option }}"
+  when:
+    - systemd_coredump is defined
+
+- name: configure journald.conf
+  ini_file:
+    path: /etc/systemd/journald.conf
+    section: Login
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+  loop: "{{ systemd_journald }}"
+  loop_control:
+    label: "{{ item.option }}"
+  when:
+    - systemd_journald is defined
+  notify:
+    - restart systemd-journald
+
+- name: configure logind.conf
+  ini_file:
+    path: /etc/systemd/logind.conf
+    section: Login
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+  loop: "{{ systemd_logind }}"
+  loop_control:
+    label: "{{ item.option }}"
+  when:
+    - systemd_logind is defined
+  notify:
+    - restart systemd-logind
+
+- name: configure resolved.conf
+  ini_file:
+    path: /etc/systemd/resolved.conf
+    section: Login
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+  loop: "{{ systemd_resolved }}"
+  loop_control:
+    label: "{{ item.option }}"
+  when:
+    - systemd_resolved is defined
+
+- name: configure system.conf
+  ini_file:
+    path: /etc/systemd/systen.conf
+    section: Login
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+  loop: "{{ systemd_systen }}"
+  loop_control:
+    label: "{{ item.option }}"
+  when:
+    - systemd_systen is defined
+
+- name: configure user.conf
+  ini_file:
+    path: /etc/systemd/user.conf
+    section: Login
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+  loop: "{{ systemd_user }}"
+  loop_control:
+    label: "{{ item.option }}"
+  when:
+    - systemd_user is defined
