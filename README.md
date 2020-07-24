@@ -33,7 +33,7 @@ This example is taken from `molecule/resources/converge.yml` and is tested on ea
       systemd_system:
         - option: LogLevel
           value: info
-      systemd_logind:
+      systemd_user:
         - option: DefaultStartLimitBurst
           value: 5
 ```
@@ -184,10 +184,6 @@ image="debian" tag="stable" tox
 ## [License](#license)
 
 Apache-2.0
-
-## [Contributors](#contributors)
-
-I'd like to thank everybody that made contributions to this repository. It motivates me, improves the code and is just fun to collaborate.
 
 
 ## [Author Information](#author-information)
