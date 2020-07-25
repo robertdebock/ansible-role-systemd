@@ -6,6 +6,7 @@
 
   roles:
     - role: ansible-role-systemd
+      systemd_default_target: multi-user.target
       systemd_coredump:
         - option: Compress
           value: "yes"

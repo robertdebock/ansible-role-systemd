@@ -13,6 +13,8 @@
     src: "{{ system_path }}/{{ systemd_default_target }}"
     dest: /etc/systemd/system/default.target
     state: link
+  when:
+    - systemd_default_target is defined
 
 - name: configure coredump.conf
   ini_file:

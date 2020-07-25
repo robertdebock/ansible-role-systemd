@@ -3,7 +3,7 @@
 
 # Select the target to boot into. Either "multiuser.target",
 # "graphical.target" or "rescue.target".
-systemd_default_target: multi-user.target
+# systemd_default_target: multi-user.target
 
 # Set options in coredump.conf. For example:
 # systemd_coredump:
