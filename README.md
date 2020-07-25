@@ -4,7 +4,7 @@ Set default target and configure systemd.
 
 |Travis|GitHub|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-systemd.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-systemd)|[![github](https://github.com/robertdebock/ansible-role-systemd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-systemd/actions)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/systemd)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/systemd)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-systemd.svg)](https://github.com/robertdebock/ansible-role-systemd/releases/)|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-systemd.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-systemd)|[![github](https://github.com/robertdebock/ansible-role-systemd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-systemd/actions)|[![quality](https://img.shields.io/ansible/quality/49836)](https://galaxy.ansible.com/robertdebock/systemd)|[![downloads](https://img.shields.io/ansible/role/d/49836)](https://galaxy.ansible.com/robertdebock/systemd)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-systemd.svg)](https://github.com/robertdebock/ansible-role-systemd/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -18,6 +18,7 @@ This example is taken from `molecule/resources/converge.yml` and is tested on ea
 
   roles:
     - role: robertdebock.systemd
+      systemd_default_target: multi-user.target
       systemd_coredump:
         - option: Compress
           value: "yes"
@@ -74,7 +75,7 @@ These variables are set in `defaults/main.yml`:
 
 # Select the target to boot into. Either "multiuser.target",
 # "graphical.target" or "rescue.target".
-systemd_default_target: multi-user.target
+# systemd_default_target: multi-user.target
 
 # Set options in coredump.conf. For example:
 # systemd_coredump:
