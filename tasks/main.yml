@@ -13,6 +13,7 @@
     src: "{{ system_path }}/{{ systemd_default_target }}"
     dest: /etc/systemd/system/default.target
     state: link
+    mode: "0644"
   when:
     - systemd_default_target is defined
 
@@ -22,6 +23,7 @@
     section: Login
     option: "{{ item.option }}"
     value: "{{ item.value }}"
+    mode: "0644"
   loop: "{{ systemd_coredump }}"
   loop_control:
     label: "{{ item.option }}"
@@ -34,6 +36,7 @@
     section: Login
     option: "{{ item.option }}"
     value: "{{ item.value }}"
+    mode: "0644"
   loop: "{{ systemd_journald }}"
   loop_control:
     label: "{{ item.option }}"
@@ -48,6 +51,7 @@
     section: Login
     option: "{{ item.option }}"
     value: "{{ item.value }}"
+    mode: "0644"
   loop: "{{ systemd_logind }}"
   loop_control:
     label: "{{ item.option }}"
@@ -62,6 +66,7 @@
     section: Login
     option: "{{ item.option }}"
     value: "{{ item.value }}"
+    mode: "0644"
   loop: "{{ systemd_resolved }}"
   loop_control:
     label: "{{ item.option }}"
@@ -74,6 +79,7 @@
     section: Login
     option: "{{ item.option }}"
     value: "{{ item.value }}"
+    mode: "0644"
   loop: "{{ systemd_systen }}"
   loop_control:
     label: "{{ item.option }}"
@@ -86,6 +92,7 @@
     section: Login
     option: "{{ item.option }}"
     value: "{{ item.value }}"
+    mode: "0644"
   loop: "{{ systemd_user }}"
   loop_control:
     label: "{{ item.option }}"
