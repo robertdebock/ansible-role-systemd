@@ -5,3 +5,4 @@
 repository:
   description: Set default target and configure systemd.
   homepage: https://robertdebock.nl/
+  topics: systemd, ansible, molecule, tox, playbook, hacktoberfest
