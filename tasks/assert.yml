@@ -4,7 +4,7 @@
     that:
       - systemd_default_target is defined
       - systemd_default_target | length > 0
-      - systemd_default_target in ["multi-user.target", "graphical.target", "rescue.target"]
+      - systemd_default_target in [ "multi-user.target", "graphical.target", "rescue.target" ]
     quiet: yes
 
 - name: test if systemd_coredump is set correctly
