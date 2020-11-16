@@ -3,14 +3,12 @@
   assert:
     that:
       - systemd_default_target is defined
-      - systemd_default_target | length > 0
       - systemd_default_target in [ "multi-user.target", "graphical.target", "rescue.target" ]
     quiet: yes
 
 - name: test if systemd_coredump is set correctly
   assert:
     that:
-      - systemd_coredump | length > 0
       - systemd_coredump is iterable
     quiet: yes
   when:
@@ -29,7 +27,6 @@
 - name: test if systemd_journald is set correctly
   assert:
     that:
-      - systemd_journald | length > 0
       - systemd_journald is iterable
     quiet: yes
   when:
@@ -48,7 +45,6 @@
 - name: test if systemd_logind is set correctly
   assert:
     that:
-      - systemd_logind | length > 0
       - systemd_logind is iterable
     quiet: yes
   when:
@@ -67,7 +63,6 @@
 - name: test if systemd_resolved is set correctly
   assert:
     that:
-      - systemd_resolved | length > 0
       - systemd_resolved is iterable
     quiet: yes
   when:
@@ -86,7 +81,6 @@
 - name: test if systemd_system is set correctly
   assert:
     that:
-      - systemd_system | length > 0
       - systemd_system is iterable
     quiet: yes
   when:
@@ -105,7 +99,6 @@
 - name: test if systemd_user is set correctly
   assert:
     that:
-      - systemd_user | length > 0
       - systemd_user is iterable
     quiet: yes
   when:
