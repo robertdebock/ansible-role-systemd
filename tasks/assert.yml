@@ -1,4 +1,5 @@
 ---
+
 - name: test if systemd_default_target is set correctly
   assert:
     that:
