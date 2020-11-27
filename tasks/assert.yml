@@ -4,6 +4,7 @@
   assert:
     that:
       - systemd_default_target is defined
+      - systemd_default_target is string
       - systemd_default_target in [ "multi-user.target", "graphical.target", "rescue.target" ]
     quiet: yes
 
@@ -19,6 +20,7 @@
   assert:
     that:
       - item.option is defined
+      - item.option is string
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_coredump }}"
@@ -37,6 +39,7 @@
   assert:
     that:
       - item.option is defined
+      - item.option is string
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_journald }}"
@@ -55,6 +58,7 @@
   assert:
     that:
       - item.option is defined
+      - item.option is string
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_logind }}"
@@ -73,6 +77,7 @@
   assert:
     that:
       - item.option is defined
+      - item.option is string
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_resolved }}"
@@ -91,6 +96,7 @@
   assert:
     that:
       - item.option is defined
+      - item.option is string
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_system }}"
@@ -109,6 +115,7 @@
   assert:
     that:
       - item.option is defined
+      - item.option is string
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_user }}"
