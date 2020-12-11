@@ -86,7 +86,7 @@
   loop_control:
     label: "{{ item.option }}"
   when:
-    - systemd_systen is defined
+    - systemd_system is defined
 
 - name: configure user.conf
   ini_file:
