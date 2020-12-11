@@ -2,9 +2,9 @@
 
 Set default target and configure systemd.
 
-|Travis|GitHub|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-systemd.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-systemd)|[![github](https://github.com/robertdebock/ansible-role-systemd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-systemd/actions)|[![quality](https://img.shields.io/ansible/quality/49836)](https://galaxy.ansible.com/robertdebock/systemd)|[![downloads](https://img.shields.io/ansible/role/d/49836)](https://galaxy.ansible.com/robertdebock/systemd)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-systemd.svg)](https://github.com/robertdebock/ansible-role-systemd/releases/)|
+|Travis|GitHub|GitLab|Quality|Downloads|Version|
+|------|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-systemd.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-systemd)|[![github](https://github.com/robertdebock/ansible-role-systemd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-systemd/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-systemd/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-systemd)|[![quality](https://img.shields.io/ansible/quality/49836)](https://galaxy.ansible.com/robertdebock/systemd)|[![downloads](https://img.shields.io/ansible/role/d/49836)](https://galaxy.ansible.com/robertdebock/systemd)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-systemd.svg)](https://github.com/robertdebock/ansible-role-systemd/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -97,10 +97,11 @@ These variables are set in `defaults/main.yml`:
 
 ## [Requirements](#requirements)
 
-- Access to a repository containing packages, likely on the internet.
-- A recent version of Ansible. (Tests run on the current, previous and next release of Ansible.)
+- pip packages listed in [requirements.txt](https://github.com/robertdebock/ansible-role-systemd/blob/master/requirements.txt).
 
 ## [Status of requirements](#status-of-requirements)
+
+The following roles are used to prepare a system. You may choose to prepare your system in another way, I have tested these roles as well.
 
 | Requirement | Travis | GitHub |
 |-------------|--------|--------|
