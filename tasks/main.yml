@@ -77,12 +77,12 @@
 
 - name: configure system.conf
   ini_file:
-    path: /etc/systemd/systen.conf
+    path: /etc/systemd/system.conf
     section: Login
     option: "{{ item.option }}"
     value: "{{ item.value }}"
     mode: "0644"
-  loop: "{{ systemd_systen }}"
+  loop: "{{ systemd_system }}"
   loop_control:
     label: "{{ item.option }}"
   when:
