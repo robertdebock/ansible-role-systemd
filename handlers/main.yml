@@ -2,14 +2,14 @@
 # handlers file for systemd
 
 - name: restart systemd-journald
-  service:
+  ansible.builtin.service:
     name: systemd-journald
     state: restarted
   when:
     - not ansible_check_mode | bool
 
 - name: restart systemd-logind
-  service:
+  ansible.builtin.service:
     name: systemd-logind
     state: restarted
     masked: no
