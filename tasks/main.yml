@@ -7,12 +7,12 @@
   delegate_to: localhost
 
 - name: install requirements
-  package:
+  ansible.builtin.package:
     name: "{{ systemd_requirements }}"
     state: present
 
 - name: set default target
-  file:
+  ansible.builtin.file:
     src: "{{ system_path }}/{{ systemd_default_target }}"
     dest: /etc/systemd/system/default.target
     state: link
@@ -21,7 +21,7 @@
     - systemd_default_target is defined
 
 - name: configure coredump.conf
-  ini_file:
+  community.general.ini_file:
     path: /etc/systemd/coredump.conf
     section: Login
     option: "{{ item.option }}"
@@ -34,7 +34,7 @@
     - systemd_coredump is defined
 
 - name: configure journald.conf
-  ini_file:
+  community.general.ini_file:
     path: /etc/systemd/journald.conf
     section: Login
     option: "{{ item.option }}"
@@ -49,7 +49,7 @@
     - restart systemd-journald
 
 - name: configure logind.conf
-  ini_file:
+  community.general.ini_file:
     path: /etc/systemd/logind.conf
     section: Login
     option: "{{ item.option }}"
@@ -64,7 +64,7 @@
     - restart systemd-logind
 
 - name: configure resolved.conf
-  ini_file:
+  community.general.ini_file:
     path: /etc/systemd/resolved.conf
     section: Login
     option: "{{ item.option }}"
@@ -77,7 +77,7 @@
     - systemd_resolved is defined
 
 - name: configure system.conf
-  ini_file:
+  community.general.ini_file:
     path: /etc/systemd/system.conf
     section: Login
     option: "{{ item.option }}"
@@ -90,7 +90,7 @@
     - systemd_system is defined
 
 - name: configure user.conf
-  ini_file:
+  community.general.ini_file:
     path: /etc/systemd/user.conf
     section: Login
     option: "{{ item.option }}"
