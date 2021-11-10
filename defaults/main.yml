@@ -31,6 +31,6 @@
 #     value: info
 
 # Set options in user.conf. For example:
-# systemd_logind:
+# systemd_user:
 #   - option: DefaultStartLimitBurst
 #     value: 5
