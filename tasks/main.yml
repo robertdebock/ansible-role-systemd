@@ -75,6 +75,8 @@
     label: "{{ item.option }}"
   when:
     - systemd_resolved is defined
+  notify:
+    - restart systemd-resolved
 
 - name: configure system.conf
   community.general.ini_file:
