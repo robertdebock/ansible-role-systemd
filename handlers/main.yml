@@ -15,3 +15,10 @@
     masked: no
   when:
     - not ansible_check_mode | bool
+
+- name: restart systemd-resolved
+  ansible.builtin.service:
+    name: systemd-resolved
+    state: restarted
+  when:
+    - not ansible_check_mode | bool
