@@ -3,6 +3,9 @@
 _systemd_requirements:
   default:
     - dbus
+  Debian:
+    - dbus
+    - systemd-resolved
   Suse:
     - dbus-1
 
