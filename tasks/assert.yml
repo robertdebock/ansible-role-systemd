@@ -21,6 +21,7 @@
     that:
       - item.option is defined
       - item.option is string
+      - item.option is not none
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_coredump }}"
@@ -40,6 +41,7 @@
     that:
       - item.option is defined
       - item.option is string
+      - item.option is not none
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_journald }}"
@@ -59,6 +61,7 @@
     that:
       - item.option is defined
       - item.option is string
+      - item.option is not none
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_logind }}"
@@ -78,6 +81,7 @@
     that:
       - item.option is defined
       - item.option is string
+      - item.option is not none
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_resolved }}"
@@ -97,6 +101,7 @@
     that:
       - item.option is defined
       - item.option is string
+      - item.option is not none
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_system }}"
@@ -116,6 +121,7 @@
     that:
       - item.option is defined
       - item.option is string
+      - item.option is not none
       - item.value is defined
     quiet: yes
   loop: "{{ systemd_user }}"
