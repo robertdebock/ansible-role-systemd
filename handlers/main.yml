@@ -6,6 +6,11 @@
     name: systemd-journald
     state: restarted
 
+- name: Unmask systemd-logind
+  ansible.builtin.systemd:
+    name: systemd-logind
+    masked: no
+
 - name: Restart systemd-logind
   ansible.builtin.service:
     name: systemd-logind
