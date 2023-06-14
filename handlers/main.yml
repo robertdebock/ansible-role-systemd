@@ -22,3 +22,5 @@
     state: restarted
   when:
     - ansible_os_family != "Suse"
+    - ansible_distribution != "RedHat" and
+      ansible_distribution_major_version != "9"
