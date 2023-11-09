@@ -2,9 +2,9 @@
 
 Set default target and configure systemd.
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-systemd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-systemd/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-systemd/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-systemd)|[![quality](https://img.shields.io/ansible/quality/49836)](https://galaxy.ansible.com/robertdebock/systemd)|[![downloads](https://img.shields.io/ansible/role/d/49836)](https://galaxy.ansible.com/robertdebock/systemd)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-systemd.svg)](https://github.com/robertdebock/ansible-role-systemd/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-systemd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-systemd/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-systemd/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-systemd)|[![downloads](https://img.shields.io/ansible/role/d/24601)](https://galaxy.ansible.com/robertdebock/systemd)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-systemd.svg)](https://github.com/robertdebock/ansible-role-systemd/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -136,7 +136,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-systemd/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-systemd/issues).
 
 ## [License](#license)
 
