@@ -1,4 +1,4 @@
-# Ansible role [systemd](#systemd)
+# [Ansible role systemd](#systemd)
 
 Set default target and configure systemd.
 
