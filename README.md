@@ -18,7 +18,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   gather_facts: true
 
   roles:
-    - role: robertdebock.systemd
+    - role: ansible-role-systemd
       systemd_default_target: multi-user.target
       systemd_coredump:
         - option: Compress
