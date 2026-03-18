@@ -9,10 +9,10 @@ _systemd_requirements:
   Suse:
     - dbus-1
 
-systemd_requirements: "{{ _systemd_requirements[ansible_distribution ~ '-' ~ ansible_distribution_release] | default(_systemd_requirements[ansible_os_family] | default(_systemd_requirements['default'])) }}"
+systemd_requirements: "{{ _systemd_requirements[ansible_facts['distribution'] ~ '-' ~ ansible_facts['distribution_release']] | default(_systemd_requirements[ansible_facts['os_family']] | default(_systemd_requirements['default'])) }}"
 
 _systemd_path:
   default: /usr/lib/systemd/system
   Debian: /lib/systemd/system
 
-system_path: "{{ _systemd_path[ansible_os_family] | default(_systemd_path['default']) }}"
+system_path: "{{ _systemd_path[ansible_facts['os_family']] | default(_systemd_path['default']) }}"

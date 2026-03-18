@@ -112,4 +112,4 @@
     state: started
     enabled: true
   when:
-    - ansible_distribution == "Fedora"
+    - ansible_facts['distribution'] == "Fedora"
