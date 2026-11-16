@@ -6,6 +6,9 @@ _systemd_requirements:
   Debian-bookworm:
     - dbus
     - systemd-resolved
+  Debian-trixie:
+    - dbus
+    - systemd-resolved
   Suse:
     - dbus-1
 
